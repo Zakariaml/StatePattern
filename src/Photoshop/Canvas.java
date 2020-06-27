@@ -3,30 +3,16 @@ package Photoshop;
 public class Canvas {
     public ToolType currentTool;
 
-
+    public Canvas(ToolType currentTool) {
+        this.currentTool = currentTool;
+    }
 
     public void mouseDown(){
-        if (currentTool == ToolType.SELECTION){
-        System.out.println("Selection Icon");
-        }
-        if (currentTool == ToolType.BRUSH){
-        System.out.println("Brush icon");
-        }
-        if (currentTool == ToolType.EREASER){
-        System.out.println("Eraser Icon");
-        }
+        currentTool.mouseDown();
     }
 
     public void mouseUp(){
-        if (currentTool == ToolType.SELECTION){
-            System.out.println("Draw dashed rectangle");
-        }
-        if (currentTool == ToolType.BRUSH){
-            System.out.println("Draw a line");
-        }
-        if (currentTool == ToolType.EREASER){
-            System.out.println("Erase something");
-        }
+        currentTool.mouseUp();
     }
 
     public ToolType getCurrentTool() {

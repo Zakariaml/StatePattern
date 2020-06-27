@@ -1,7 +1,7 @@
 package Photoshop;
 
-public enum ToolType {
-    SELECTION,
-    BRUSH,
-    EREASER
+public interface ToolType {
+    void mouseDown();
+    void mouseUp();
+
 }
